@@ -1,4 +1,4 @@
-# soffice_wrapper
+# soffice-wrapper
 
 基于 LibreOffice（soffice）的封装库，将 Office 文档转换为 PDF。
 
@@ -6,11 +6,11 @@
 
 ```bash
 # 作为 git submodule
-git submodule add https://github.com/dreasky/soffice_wrapper.git libs/soffice_wrapper
-pip install -e libs/soffice_wrapper
+git submodule add https://github.com/dreasky/soffice-wrapper.git libs/soffice-wrapper
+pip install -e libs/soffice-wrapper
 
 # 直接从 GitHub 安装
-pip install git+https://github.com/dreasky/soffice_wrapper.git
+pip install git+https://github.com/dreasky/soffice-wrapper.git
 ```
 
 ## 前置依赖
