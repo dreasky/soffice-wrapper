@@ -1,5 +1,6 @@
 """soffice (LibreOffice) wrapper — convert documents to PDF."""
 
+import os
 import subprocess
 import sys
 import tempfile
@@ -7,6 +8,14 @@ from pathlib import Path
 
 
 SOFFICE_EXTENSIONS = {".doc", ".docx", ".ppt", ".pptx", ".odt", ".odp"}
+
+
+def _soffice_executable() -> str:
+    libre_office_path = os.environ.get("LIBRE_OFFICE_PATH")
+    if libre_office_path:
+        exe = Path(libre_office_path) / ("soffice.exe" if sys.platform == "win32" else "soffice")
+        return str(exe)
+    return "soffice"
 
 
 class SofficeWrapper:
@@ -28,7 +37,7 @@ class SofficeWrapper:
             profile_url = "file:///" + tmp_profile.replace("\\", "/")
             result = subprocess.run(
                 [
-                    "soffice",
+                    _soffice_executable(),
                     f"-env:UserInstallation={profile_url}",
                     "--headless",
                     "--invisible",
