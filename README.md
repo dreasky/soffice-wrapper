@@ -10,7 +10,7 @@ git submodule add https://github.com/dreasky/soffice-wrapper.git libs/soffice-wr
 pip install -e libs/soffice-wrapper
 
 # 直接从 GitHub 安装
-pip install git+https://github.com/dreasky/soffice-wrapper.git
+pip install --upgrade git+https://github.com/dreasky/soffice-wrapper.git
 ```
 
 ## 前置依赖
