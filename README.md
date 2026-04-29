@@ -15,10 +15,12 @@ pip install --upgrade git+https://github.com/dreasky/soffice-wrapper.git
 
 ## 前置依赖
 
-需要安装 LibreOffice 并确保 `soffice` 命令可用：
+Win: 需要安装 LibreOffice 并确保 `soffice` 命令可用：
 
 - 下载：<https://www.libreoffice.org/download/>
 - 安装后将 LibreOffice 的 `program` 目录加入系统 `PATH`
+
+Linux: `sudo apt install -y libreoffice-core-nogui`
 
 验证：
 
